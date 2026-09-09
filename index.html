@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className='js';</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>酒者蘇生 | 締めサプリで翌日対策</title>
+<meta name="description" content="翌朝、別人..? 飲む前の仕込みで、翌朝スッキリ。こだわり成分18種配合、エナジードリンク味の顆粒タイプ締めサプリ「酒者蘇生」。栄養機能食品（ビタミンC）。">
+<meta property="og:title" content="酒者蘇生 | 締めサプリで翌日対策">
+<meta property="og:description" content="翌朝、別人..? 飲む前の仕込みで、翌朝スッキリ。こだわり成分18種配合の締めサプリ。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-a.webp">
+<meta name="theme-color" content="#0a0a0a">
+<style>
+  /*
+   * 酒者蘇生 (SHUSYASOSEI) EC ランディングページ
+   * カラー: #004c4a / #15a094 / #ffcf4c / #42210b
+   * リンク差し込み箇所は下部の :root 変数 + data-cta を参照（README.md参照）
+   */
+  :root{
+    --teal-dark:#004c4a;
+    --teal:#15a094;
+    --gold:#ffcf4c;
+    --brown:#42210b;
+    --ink:#0a0a0a;
+    --content:480px;      /* 中央コンテンツ列（モバイル設計幅） */
+    --break:941px;        /* この幅以上でPC 3カラム表示 */
+    --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:#fff;
+    background:#0a0a0a url("assets/bg-page.webp") center/cover fixed no-repeat;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  /* ===== 中央コンテンツ列 ===== */
+  .content{
+    width:100%;
+    max-width:var(--content);
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    background:#000;                 /* セクション間の隙間対策 */
+    box-shadow:0 0 60px rgba(0,0,0,.6);
+  }
+  .content > img,
+  .content > section{width:100%}
+  .content > img{height:auto}
+  /* ヒーロー1: 透過縁の背後にレールと同じスワール背景を透かす */
+  .hero1{background:#0a0a0a url("assets/bg-page.webp") center/cover fixed no-repeat}
+  .hero1 img{display:block;width:100%}
+
+  /* ===== セクション02（部品合成） ===== */
+  .s02{
+    position:relative;
+    aspect-ratio:1980/2700;
+    background:#0b0b0b url("assets/s02-bg.webp") center/cover no-repeat;
+    display:flex;flex-direction:column;justify-content:space-between;
+    align-items:center;
+    padding:7% 0 5%;
+  }
+  .s02-head{display:flex;flex-direction:column;align-items:center;gap:4.5%;width:100%}
+  .s02-head .t{width:74%}
+  .s02-head .l{width:70%}
+  .s02-head .x1{width:74%;margin-top:2%}
+  .s02-head .x2{width:62%}
+  .s02-photo{width:86%;border-radius:2px}
+
+  /* ===== セクション11（保証・フッター） ===== */
+  .s11{
+    position:relative;
+    background:#0b0b0b url("assets/s11-bg.webp") center/cover no-repeat;
+    display:flex;flex-direction:column;align-items:center;
+    text-align:center;
+    padding:11% 8% 8%;
+    gap:5%;
+  }
+  .s11 h2{font-family:var(--sans);font-weight:700;font-size:clamp(18px,5.2vw,24px);letter-spacing:.08em;margin:0}
+  .pills{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;width:min(320px,78%)}
+  .pills li{
+    background:#fff;color:#1a1a1a;font-weight:700;
+    border-radius:999px;padding:14px 8px;font-size:clamp(15px,4.4vw,18px);
+    letter-spacing:.05em;
+  }
+  .s11 .brand{font-family:var(--serif);font-weight:600;font-size:clamp(34px,10vw,48px);letter-spacing:.12em;margin:6% 0 2%}
+  .s11 .legal{display:flex;flex-direction:column;gap:14px;font-size:clamp(13px,3.6vw,15px);opacity:.92}
+  .s11 .legal a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:.5px}
+  .s11 .copy{font-size:11px;opacity:.55;letter-spacing:.03em;margin:6% 0 0}
+
+  /* モバイル用の追加情報（SNS + 卸売） */
+  .mobile-extras{
+    display:flex;flex-direction:column;align-items:center;gap:18px;
+    padding:34px 8% 40px;background:#000;text-align:center;
+  }
+  .sns-label{font-size:14px;letter-spacing:.18em;opacity:.9}
+  .sns-icons{display:flex;gap:22px;align-items:center}
+  .sns-icons img{width:40px;height:40px}
+  .wholesale{
+    display:inline-block;border:1px solid rgba(255,255,255,.75);
+    border-radius:999px;padding:13px 26px;font-size:14px;letter-spacing:.02em;
+    transition:background .2s,color .2s;
+  }
+  .wholesale:hover{background:#fff;color:#111}
+
+  /* ===== PC 固定レール ===== */
+  .rail{display:none}
+  @media (min-width:941px){
+    /* PC時: ヒーロー(縦727:900)が1画面に収まるよう、中央列幅を画面高さ基準に */
+    :root{--content:clamp(460px,78vh,700px)}
+    .rail-left,.rail-right{
+      position:fixed;top:0;height:100vh;
+      width:calc((100vw - var(--content)) / 2);
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      z-index:5;pointer-events:none;
+    }
+    .rail-left{left:0}
+    .rail-right{right:0;gap:20px}
+    .rail-left img{width:min(230px,58%)}
+    .rail-right *{pointer-events:auto}
+    .rail-left *{pointer-events:auto}
+    .rail-right .sns-label{font-size:15px;letter-spacing:.16em;opacity:.9;margin-bottom:-2px}
+    .rail-right .sns-icons img{width:44px;height:44px}
+    .rail-right > a[data-cta="purchase"]{width:100%}
+    .cta-img{width:min(215px,88%);margin:0 auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));transition:transform .18s,filter .18s}
+    .cta-img:hover{transform:translateY(-2px);filter:drop-shadow(0 10px 20px rgba(255,207,76,.35))}
+    .rail-right .wholesale{margin-top:8px;padding:11px 20px;font-size:13px}
+    .mobile-extras{display:none}
+    body{padding-bottom:0}
+  }
+
+  /* ===== モバイル固定CTAバー ===== */
+  .mobile-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    display:flex;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));
+    background:linear-gradient(to top,rgba(0,0,0,.96),rgba(0,0,0,.75));
+    backdrop-filter:blur(4px);
+  }
+  .mobile-cta a{flex:1}
+  .mobile-cta img{width:100%}
+  @media (min-width:941px){.mobile-cta{display:none}}
+  @media (max-width:940px){.content{padding-bottom:76px}}
+
+  /* ===== スクロール演出（JS有効時のみ隠す） ===== */
+  html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  html.js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+  <!-- PC: 左固定ロゴ -->
+  <div class="rail rail-left" aria-hidden="true">
+    <img src="assets/logo.webp" alt="酒者蘇生 SHUSYASOSEI" width="230">
+  </div>
+
+  <!-- PC: 右固定サイドバー -->
+  <div class="rail rail-right">
+    <span class="sns-label">Official&nbsp;&nbsp;SNS</span>
+    <div class="sns-icons">
+      <a href="#" data-cta="line" aria-label="公式LINE"><img src="assets/icon-line.webp" alt="LINE"></a>
+      <a href="#" data-cta="instagram" aria-label="公式Instagram"><img src="assets/icon-ig.webp" alt="Instagram"></a>
+    </div>
+    <a href="#" data-cta="purchase" aria-label="今すぐ購入"><img class="cta-img" src="assets/btn-buy.webp" alt="今すぐ購入"></a>
+    <a href="#" data-cta="purchase" aria-label="ご購入はこちら"><img class="cta-img" src="assets/btn-purchase.webp" alt="ご購入はこちら"></a>
+    <a href="#" data-cta="wholesale" class="wholesale">卸売販売パートナー様はこちら</a>
+  </div>
+
+  <!-- 中央コンテンツ -->
+  <main class="content">
+
+    <!-- 01: ヒーロー1（左右が透過→スワール背景を透かす） -->
+    <div class="hero1"><img src="assets/hero-a.webp" alt="酒者蘇生 翌朝、別人..? 飲む前の仕込みで、翌朝スッキリ" fetchpriority="high"></div>
+    <!-- 02: ヒーロー2 -->
+    <img class="reveal" src="assets/hero-b.webp" alt="お付き合いの多い夜や、翌日を万全な状態で迎えたい方のために。" loading="lazy">
+
+    <!-- 03: お悩み -->
+    <section class="s02 reveal" aria-label="こんなお悩みありませんか？ 朝のコンディションが整わない… 昨日の疲れが抜けない…">
+      <div class="s02-head">
+        <img class="t" src="assets/s02-title.webp" alt="こんなお悩みありませんか？">
+        <img class="l" src="assets/s02-line.webp" alt="">
+        <img class="x1" src="assets/s02-tex1.webp" alt="朝のコンディションが整わない…">
+        <img class="x2" src="assets/s02-tex2.webp" alt="昨日の疲れが抜けない…">
+      </div>
+      <img class="s02-photo" src="assets/s02-img.webp" alt="翌朝の不調に悩む男性">
+    </section>
+
+    <!-- 03: 選ばれる理由 -->
+    <img class="reveal" src="assets/s03.webp" alt="控えるではなく、整えるという選択を。酒者蘇生が選ばれる理由" loading="lazy">
+    <!-- 04: 3大成分+15種 -->
+    <img class="reveal" src="assets/s04.webp" alt="01 3大成分+15種の成分をバランス配合！ シリマリン240mg・グルタチオン酵母エキス340mg・オルニチン400mg" loading="lazy">
+    <!-- 05: 配合量比較 -->
+    <img class="reveal" src="assets/s05.webp" alt="02 成分の種類と配合量が圧倒的に違う！ 酒者蘇生 約3,000mg。顆粒タイプだからたくさんの量が配合可能" loading="lazy">
+    <!-- 06: 開発の想い STORY -->
+    <img class="reveal" src="assets/s06.webp" alt="開発の想い STORY 体の内側からの栄養補給が必要。" loading="lazy">
+    <!-- 07: そんな方のためにできたのが -->
+    <img class="reveal" src="assets/s07.webp" alt="そんな方のためにできたのが 酒者蘇生。18種の成分を、これ1包でまかなえます" loading="lazy">
+    <!-- 08: オリジナル処方 -->
+    <img class="reveal" src="assets/s08.webp" alt="贅沢配合のオリジナル処方。朝からシャッキリしてる、パフォーマンスに響かない" loading="lazy">
+    <!-- 09: シーン -->
+    <img class="reveal" src="assets/s09.webp" alt="罪悪感なく楽しめる。個包装だから移動中に効率よく摂取できる" loading="lazy">
+    <!-- 10: 飲むタイミング -->
+    <img class="reveal" src="assets/s10.webp" alt="個包装だから持ち運びにも便利。おすすめの飲むタイミング：飲み会中・飲み会後・就寝前" loading="lazy">
+
+    <!-- モバイル：SNS + 卸売 -->
+    <div class="mobile-extras">
+      <span class="sns-label">Official&nbsp;&nbsp;SNS</span>
+      <div class="sns-icons">
+        <a href="#" data-cta="line" aria-label="公式LINE"><img src="assets/icon-line.webp" alt="LINE"></a>
+        <a href="#" data-cta="instagram" aria-label="公式Instagram"><img src="assets/icon-ig.webp" alt="Instagram"></a>
+      </div>
+      <a href="#" data-cta="wholesale" class="wholesale">卸売販売パートナー様はこちら</a>
+    </div>
+
+    <!-- 11: 保証・特典 + フッター -->
+    <section class="s11 reveal">
+      <h2>保証・特典</h2>
+      <ul class="pills">
+        <li>初回割引</li>
+        <li>定期縛りなし</li>
+        <li>返金保証</li>
+      </ul>
+      <div class="brand">酒者蘇生</div>
+      <nav class="legal" aria-label="法的情報">
+        <a href="#" data-cta="tokushoho">特定商取引法に基づく表示</a>
+        <a href="#" data-cta="privacy">プライバシーポリシー</a>
+      </nav>
+      <p class="copy">© 2026, shushasosei</p>
+    </section>
+  </main>
+
+  <!-- モバイル固定CTA -->
+  <div class="mobile-cta">
+    <a href="#" data-cta="purchase" aria-label="今すぐ購入"><img src="assets/btn-buy.webp" alt="今すぐ購入"></a>
+    <a href="#" data-cta="purchase" aria-label="ご購入はこちら"><img src="assets/btn-purchase.webp" alt="ご購入はこちら"></a>
+  </div>
+
+<script>
+  // スクロール フェードイン
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(e){e.classList.add('in')});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
