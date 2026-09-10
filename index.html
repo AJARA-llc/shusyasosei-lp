@@ -102,12 +102,6 @@
   .sns-label{font-size:14px;letter-spacing:.18em;opacity:.9}
   .sns-icons{display:flex;gap:22px;align-items:center}
   .sns-icons img{width:40px;height:40px}
-  .wholesale{
-    display:inline-block;border:1px solid rgba(255,255,255,.75);
-    border-radius:999px;padding:13px 26px;font-size:14px;letter-spacing:.02em;
-    transition:background .2s,color .2s;
-  }
-  .wholesale:hover{background:#fff;color:#111}
 
   /* ===== PC 固定レール ===== */
   .rail{display:none}
@@ -127,10 +121,10 @@
     .rail-left *{pointer-events:auto}
     .rail-right .sns-label{font-size:15px;letter-spacing:.16em;opacity:.9;margin-bottom:-2px}
     .rail-right .sns-icons img{width:44px;height:44px}
-    .rail-right > a[data-cta="purchase"]{width:100%}
+    .rail-right > a[data-cta="purchase"],
+    .rail-right > a[data-cta="wholesale"]{width:100%}
     .cta-img{width:min(215px,88%);margin:0 auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));transition:transform .18s,filter .18s}
     .cta-img:hover{transform:translateY(-2px);filter:drop-shadow(0 10px 20px rgba(255,207,76,.35))}
-    .rail-right .wholesale{margin-top:8px;padding:11px 20px;font-size:13px}
     .mobile-extras{display:none}
     body{padding-bottom:0}
   }
@@ -169,9 +163,8 @@
       <a href="#" data-cta="line" aria-label="公式LINE"><img src="assets/icon-line.webp" alt="LINE"></a>
       <a href="#" data-cta="instagram" aria-label="公式Instagram"><img src="assets/icon-ig.webp" alt="Instagram"></a>
     </div>
-    <a href="#" data-cta="purchase" aria-label="今すぐ購入"><img class="cta-img" src="assets/btn-buy.webp" alt="今すぐ購入"></a>
     <a href="#" data-cta="purchase" aria-label="ご購入はこちら"><img class="cta-img" src="assets/btn-purchase.webp" alt="ご購入はこちら"></a>
-    <a href="#" data-cta="wholesale" class="wholesale">卸売販売パートナー様はこちら</a>
+    <a href="#" data-cta="wholesale" aria-label="店舗様・卸販売はこちら"><img class="cta-img" src="assets/btn-wholesale.webp" alt="店舗様・卸販売はこちら（LINEでご案内いたします）"></a>
   </div>
 
   <!-- 中央コンテンツ -->
@@ -217,7 +210,6 @@
         <a href="#" data-cta="line" aria-label="公式LINE"><img src="assets/icon-line.webp" alt="LINE"></a>
         <a href="#" data-cta="instagram" aria-label="公式Instagram"><img src="assets/icon-ig.webp" alt="Instagram"></a>
       </div>
-      <a href="#" data-cta="wholesale" class="wholesale">卸売販売パートナー様はこちら</a>
     </div>
 
     <!-- 11: 保証・特典 + フッター -->
@@ -239,8 +231,8 @@
 
   <!-- モバイル固定CTA -->
   <div class="mobile-cta">
-    <a href="#" data-cta="purchase" aria-label="今すぐ購入"><img src="assets/btn-buy.webp" alt="今すぐ購入"></a>
     <a href="#" data-cta="purchase" aria-label="ご購入はこちら"><img src="assets/btn-purchase.webp" alt="ご購入はこちら"></a>
+    <a href="#" data-cta="wholesale" aria-label="店舗様・卸販売はこちら"><img src="assets/btn-wholesale.webp" alt="店舗様・卸販売はこちら（LINEでご案内いたします）"></a>
   </div>
 
 <script>

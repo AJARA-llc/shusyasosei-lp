@@ -35,10 +35,10 @@ attribute so you can find/replace by purpose:
 
 | `data-cta` | Where it appears | Point it to |
 |---|---|---|
-| `purchase` | 今すぐ購入 / ご購入はこちら (right rail + mobile sticky bar) | Shopify product / checkout URL |
+| `purchase` | ご購入はこちら (right rail + mobile sticky bar) | Shopify product / checkout URL |
 | `line` | Official SNS (LINE icon) | 公式LINE URL |
 | `instagram` | Official SNS (IG icon) | 公式Instagram URL |
-| `wholesale` | 卸売販売パートナー様はこちら | Wholesale inquiry page/form |
+| `wholesale` | 店舗様・卸販売はこちら（LINEでご案内いたします）(right rail + mobile sticky bar) | 卸売 inquiry — LINE URL / form |
 | `tokushoho` | Footer | 特定商取引法に基づく表示 page |
 | `privacy` | Footer | プライバシーポリシー page |
 
