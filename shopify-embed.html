@@ -113,6 +113,8 @@
     .ssg-lp .rail{
       display:flex;flex-direction:column;align-items:center;justify-content:center;
       position:sticky;top:0;height:100vh;flex:1 1 0;min-width:0;padding:20px;
+      /* height:100vhで高さが固定されているのでcoverで敷いても伸びない(.ssg-lp本体と違い安全) */
+      background:#0a0a0a url("https://ajara-llc.github.io/shusyasosei-lp/assets/bg-page.webp") center/cover no-repeat;
     }
     .ssg-lp .rail-left img{width:min(230px,58%)}
     .ssg-lp .rail-right{gap:20px}
