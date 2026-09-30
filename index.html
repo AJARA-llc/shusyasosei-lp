@@ -31,7 +31,9 @@
     /* テーマのページタイトル/上下paddingで白帯が出る場合、この2値をマイナスに調整(例 -40px)。ヘッダーに食い込んだら数値を小さく */
     margin-top:0;margin-bottom:0;
     position:relative;overflow-x:clip;  /* clip=スクロールコンテナを作らない→子のsticky(追従)が生きる。hiddenだと追従が死ぬ */
-    background:#0a0a0a url("https://ajara-llc.github.io/shusyasosei-lp/assets/bg-page.webp") center/cover no-repeat;
+    /* bg-page.webpはページ全体(.ssg-lp)ではなく.hero1側だけに敷く。ここに敷くと全セクション分の高さにcoverで
+       引き伸ばされ画像が歪む。地の色は単色にしておく */
+    background:#0a0a0a;
     font-family:var(--sans);color:#fff;
   }
   .ssg-lp *{box-sizing:border-box}
@@ -235,8 +237,6 @@
     <main class="content">
       <!-- 01: ヒーロー1 -->
       <div class="hero1"><img src="https://ajara-llc.github.io/shusyasosei-lp/assets/hero-a.webp" alt="酒者蘇生 翌朝、別人..? 飲む前の仕込みで、翌朝スッキリ"></div>
-      <!-- 02: ヒーロー2 -->
-      <img class="reveal" src="https://ajara-llc.github.io/shusyasosei-lp/assets/hero-b.webp" alt="お付き合いの多い夜や、翌日を万全な状態で迎えたい方のために。" loading="lazy">
 
       <!-- 03: お悩み -->
       <section id="ssg-nayami" class="s02 reveal jump" aria-label="こんなお悩みありませんか？ 朝のコンディションが整わない… 昨日の疲れが抜けない…">

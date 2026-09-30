@@ -12,7 +12,7 @@ client-supplied design assets and the confirmation PDF (`確認用_酒者蘇生_
 
 | Section | Source asset | Content |
 |---|---|---|
-| Hero | `hero-a.webp` / `hero-b.webp` (crossfade) | 翌朝、別人..? / 飲む前の仕込みで、翌朝スッキリ |
+| Hero | `hero-a.webp` | 翌朝、別人..? / 飲む前の仕込みで、翌朝スッキリ |
 | 02 | `s02-*.webp` (composed in HTML) | こんなお悩みありませんか？ |
 | 03 | `s03.webp` | 控えるではなく、整えるという選択を / 選ばれる理由 |
 | 04 | `s04.webp` | 3大成分+15種をバランス配合 |
