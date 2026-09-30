@@ -60,6 +60,12 @@ npx wrangler pages deploy . --project-name shusyasosei
 - Regenerate assets from the raw PNGs with `cwebp -sharp_yuv` (original in
   `~/Downloads/shusyasosei_ec_提出01/`). Composites 1600px wide q90; hero/text/buttons/
   logo near-native q92; backgrounds 1200px q82. Total ~2.7 MB.
+- 2026-09-30: `logo.webp` / `s11-logo.webp` refreshed from the client's updated
+  `logo_yoko_w.png` (`~/Downloads/images/`) — same logotype/aspect ratio, cropped
+  (kanji-only region) for `s11-logo.webp`, cwebp -sharp_yuv q92. The other files in
+  that folder (Instagram-square recaps of sections 04/05/10, lifestyle stock photos,
+  ingredient close-ups, pkg.png, texture/decorative images) were reviewed but are out
+  of scope for this LP per operator decision — logo only.
 - The PC center column is sized by viewport **height** (`--content: clamp(460px,78vh,700px)`)
   so the hero fits one screen without clipping; below 941px it switches to the mobile layout.
 - Respects `prefers-reduced-motion` (disables hero crossfade + scroll reveal).
